@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck: Episodio Dulce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+            color: #F9FAFB; /* text-gray-50 */
+        }
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem 2rem;
+            border-bottom: 1px solid #374151; /* border-gray-700 */
+        }
+        .slide-title {
+            font-weight: 900;
+            font-size: 3rem; /* text-5xl */
+            line-height: 1.1;
+            text-align: center;
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 768px) {
+            .slide-title {
+                font-size: 4rem; /* md:text-6xl */
+            }
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #ec4899; /* pink-500 */
+            transform: scale(1.1);
+        }
+        .card {
+            background-color: #1F2937; /* bg-gray-800 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem;
+            border: 1px solid #374151; /* border-gray-700 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .card img {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.3), 0 4px 6px -2px rgba(139, 92, 246, 0.2);
+        }
+        .card:hover img {
+            transform: scale(1.05);
+        }
+        .stat-card {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(55, 65, 81, 0.7);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(90deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @media (min-width: 768px) {
+            .stat-number {
+                font-size: 3rem; 
+            }
+        }
+        .stat-number-2 {
+             background: linear-gradient(90deg, #facc15, #a3e635);
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+        }
+        .stat-number-3 {
+             background: linear-gradient(90deg, #f87171, #fb923c);
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+        }
+        .progress-bar {
+            background-color: #374151; /* bg-gray-700 */
+            border-radius: 0.5rem; /* rounded-lg */
+            overflow: hidden;
+            width: 100%;
+            height: 1.5rem;
+        }
+        .progress {
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-gray-900/80 backdrop-blur-sm p-4 fixed w-full top-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#portada" class="text-xl font-bold bg-gradient-to-r from-pink-500 to-violet-500 text-transparent bg-clip-text">Episodio Dulce</a>
+            <div class="hidden md:flex space-x-6 text-sm font-bold">
+                <a href="#problema" class="nav-link text-gray-300">Problema</a>
+                <a href="#solucion" class="nav-link text-gray-300">Solución</a>
+                <a href="#producto" class="nav-link text-gray-300">Producto</a>
+                <a href="#mercado" class="nav-link text-gray-300">Mercado</a>
+                <a href="#equipo" class="nav-link text-gray-300">Equipo</a>
+                <a href="#peticion" class="nav-link text-gray-300">Petición</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slide 1: Portada -->
+    <section id="portada" class="slide" style="background: linear-gradient(to bottom right, #111827, #1f2937);">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-8xl font-black uppercase tracking-tighter">Episodio Dulce</h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-300 font-bold">Postres basados en tendencias.</p>
+            <p class="mt-2 text-sm text-gray-400">29 de junio de 2025</p>
+        </div>
+    </section>
+
+    <!-- Slide 2: El Problema -->
+    <section id="problema" class="slide">
+        <div class="container mx-auto text-center">
+            <h2 class="slide-title">El Problema: La Desconexión Emocional</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center mt-8">
+                <div class="text-left max-w-lg mx-auto">
+                    <p class="text-lg text-gray-300 mb-4">El antojo de un postre es un impulso emocional. Para los jóvenes de 16 a 30 años, esas emociones están ligadas a lo que viven en internet: la serie viral, el meme del momento o el último trend de TikTok.</p>
+                    <p class="text-lg text-gray-300 font-bold">El mercado actual les falla con una oferta genérica y estática. Existe una brecha entre el momento cultural y el producto que pueden consumir.</p>
+                </div>
+               <div class="grid grid-cols-2 gap-4">
+                    <img src="https://annaspasteleria.com/images/2019post/_videoCover/IMG_7029editweb.jpg" alt="Postre de crepas genérico" class="rounded-lg h-full w-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pastel de chocolate genérico" class="rounded-lg h-full w-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTYzb73jYcg_1uHzYFzOZ_fObnNWRodZ5D2A&s" alt="Crepas genéricas con fruta" class="rounded-lg h-full w-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <img src="https://s1.elespanol.com/2023/04/09/cocinillas/recetas/postres/754934523_232288662_1706x960.jpg" alt="Galletas genéricas" class="rounded-lg h-full w-full object-cover opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: La Solución -->
+    <section id="solucion" class="slide">
+        <div class="container mx-auto text-center">
+            <h2 class="slide-title">La Solución: Episodio Dulce</h2>
+            <p class="text-2xl font-bold mt-2 mb-8">Comida + Estilo de Vida + Internet</p>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <img src="https://i.postimg.cc/f3x2bx5B/Dark-Kitchen-Fig-Jam-1.jpg" alt="Bebida de neón con código QR" class="rounded-xl shadow-2xl shadow-pink-500/20 w-full max-w-md mx-auto">
+                <div class="text-left max-w-lg mx-auto">
+                    <p class="text-lg text-gray-300 mb-4">Somos una <strong>dark kitchen</strong> que transforma las tendencias virales en antojos comestibles y de edición limitada.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><span class="text-pink-400 font-bold mr-3">✓</span>Reacción en tiempo real: Capturamos el hype y lo volvemos un producto.</li>
+                        <li class="flex items-start"><span class="text-pink-400 font-bold mr-3">✓</span>Experiencias efímeras: Cada lanzamiento es un "episodio" único y "instagrameable".</li>
+                        <li class="flex items-start"><span class="text-pink-400 font-bold mr-3">✓</span>Conexión auténtica: Hablamos el mismo idioma que nuestro público.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Nuestro Producto -->
+    <section id="producto" class="slide">
+        <div class="container mx-auto text-center">
+            <h2 class="slide-title">Un Menú en Evolución Constante</h2>
+            <p class="text-xl text-gray-400 mb-12">Nuestra base son productos altamente personalizables para una agilidad sin precedentes.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card p-0">
+                    <img src="https://i.postimg.cc/dZdLMVJk/Dark-Kitchen-Fig-Jam-4.jpg" alt="Bebida temática espacial con un cohete" class="rounded-t-lg mb-4 h-64 w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-white">Bebidas Temáticas</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Desde colores neón con glitter hasta sabores inspirados en personajes.</p>
+                    </div>
+                </div>
+                <div class="card p-0">
+                    <img src="https://i.postimg.cc/JGVsNZQb/Dark-Kitchen-Fig-Jam-2.jpg" alt="Galletas con forma de oso" class="rounded-t-lg mb-4 h-64 w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-white">Galletas de Autor</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Con arte comestible que refleja la tendencia del día.</p>
+                    </div>
+                </div>
+                <div class="card p-0">
+                    <img src="https://i.postimg.cc/HJBM3nLT/Dark-Kitchen-Fig-Jam.jpg" alt="Crepas de colores en caja de Black Mirror" class="rounded-t-lg mb-4 h-64 w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-white">Postres Conceptuales</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Como las crepas "Black Mirror" o el "Brownie Emo".</p>
+                    </div>
+                </div>
+                <div class="card p-0">
+                    <img src="https://i.postimg.cc/q6CCkGx7/Dark-Kitchen-Fig-Jam-3.jpg" alt="Ramen con un capibara" class="rounded-t-lg mb-4 h-64 w-full object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl text-white">Ediciones Especiales</h3>
+                        <p class="text-gray-400 mt-2 text-sm">Ediciones limitadas y creativas como el "Ramen Capibara".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Mercado -->
+    <section id="mercado" class="slide">
+        <div class="container mx-auto text-center">
+            <h2 class="slide-title">Una Oportunidad de Mercado Clara</h2>
+            <p class="text-xl text-gray-400 max-w-4xl mx-auto mb-12">Nuestra oportunidad se basa en tres pilares: un mercado nacional en auge, un público objetivo masivo y concentrado, y un cambio permanente en el comportamiento del consumidor.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12 max-w-6xl mx-auto">
+                <div class="card stat-card p-6">
+                    <p class="stat-number">$2.53B</p>
+                    <h3 class="font-bold text-xl text-white mt-2">Mercado Nacional (México)</h3>
+                    <p class="text-gray-400 text-sm mt-1">Proyección del mercado de food delivery en México para 2024, el 2º más grande de Latam.</p>
+                    <p class="text-xs text-gray-500 mt-2">Fuente: Análisis de Mercado</p>
+                </div>
+                <div class="card stat-card p-6">
+                    <p class="stat-number stat-number-2">439,965</p>
+                    <h3 class="font-bold text-xl text-white mt-2">Público Objetivo (Puebla)</h3>
+                    <p class="text-gray-400 text-sm mt-1">Jóvenes de 15 a 29 años en Puebla, el segmento poblacional más grande y concentrado.</p>
+                    <p class="text-xs text-gray-500 mt-2">Fuente: INEGI, Censo 2020</p>
+                </div>
+                <div class="card stat-card p-6">
+                    <p class="stat-number stat-number-3">>60%</p>
+                    <h3 class="font-bold text-xl text-white mt-2">Hábito de Consumo</h3>
+                    <p class="text-gray-400 text-sm mt-1">De Gen-Z y Millennials consideran el delivery "una parte esencial de su estilo de vida".</p>
+                    <p class="text-xs text-gray-500 mt-2">Fuente: Estudio de Comportamiento del Consumidor</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-4">La Brecha Estratégica en Puebla</h3>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg">
+                <p class="text-gray-300 text-left">El mercado de postres en Puebla está polarizado: por un lado, pastelerías tradicionales de alto costo (Thérèse), y por otro, cadenas de mercado masivo y producto genérico (Esperanza). <br><br><strong class="text-pink-400">Actualmente, no existe un competidor que combine la agilidad de una dark kitchen con una oferta de productos en tendencia, personalizables y diseñados para viralizarse en redes sociales.</strong> Esta es la brecha que venimos a dominar.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Slide 6: Ventaja Competitiva -->
+    <section id="ventaja" class="slide">
+        <div class="container mx-auto text-center">
+            <h2 class="slide-title">Ventaja Competitiva</h2>
+             <p class="text-2xl font-bold mt-2 mb-8">Vendemos <span class="text-pink-400">tendencias comestibles</span>.</p>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="card">
+                    <h3 class="font-bold text-2xl text-white mb-2">Velocidad</h3>
+                    <p class="text-gray-300">Nos movemos a la velocidad de la cultura pop. De la idea al lanzamiento en menos de 48 horas.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-bold text-2xl text-white mb-2">Viralidad por Diseño</h3>
+                    <p class="text-gray-300">Cada aspecto, desde el sabor al empaque, está pensado para ser estético y compartible.</p>
+                </div>
+                 <div class="card">
+                    <h3 class="font-bold text-2xl text-white mb-2">Inteligencia de Mercado</h3>
+                    <p class="text-gray-300">Usamos social listening y análisis de datos para predecir el siguiente gran antojo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 9: El Equipo -->
+    <section id="equipo" class="slide">
+        <div class="container mx-auto text-center">
+            <h2 class="slide-title">Los Productores de este Episodio</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                <div class="card text-center p-6">
+                    <img src="https://placehold.co/200x200/ec4899/ffffff?text=M" alt="Foto de Miriam" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-700">
+                    <h3 class="font-bold text-xl text-white">Miriam</h3>
+                    <p class="font-bold text-pink-400 text-sm">Marketing, Comms & Dir. Creativa</p>
+                    <p class="text-gray-400 mt-2 text-sm">La voz y estética de la marca, construye comunidad y contenido viral.</p>
+                </div>
+                <div class="card text-center p-6">
+                    <img src="https://placehold.co/200x200/8b5cf6/ffffff?text=J" alt="Foto de Jorge" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-700">
+                    <h3 class="font-bold text-xl text-white">Jorge</h3>
+                    <p class="font-bold text-violet-400 text-sm">Gerente de Op. de Cocina y Calidad</p>
+                    <p class="text-gray-400 mt-2 text-sm">Asegura la excelencia y agilidad en cada postre que sale de la cocina.</p>
+                </div>
+                <div class="card text-center p-6">
+                    <img src="https://placehold.co/200x200/ec4899/ffffff?text=E" alt="Foto de Eduardo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-700">
+                    <h3 class="font-bold text-xl text-white">Eduardo</h3>
+                    <p class="font-bold text-pink-400 text-sm">Director de Estrategia y Finanzas</p>
+                    <p class="text-gray-400 mt-2 text-sm">El arquitecto del crecimiento, enfocado en la rentabilidad y el futuro del negocio.</p>
+                </div>
+                 <div class="card text-center p-6">
+                    <img src="https://placehold.co/200x200/8b5cf6/ffffff?text=E" alt="Foto de Esmeralda" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-700">
+                    <h3 class="font-bold text-xl text-white">Esmeralda</h3>
+                    <p class="font-bold text-violet-400 text-sm">Suministros y Compras Estratégicas</p>
+                    <p class="text-gray-400 mt-2 text-sm">Garantiza los mejores ingredientes al mejor costo, forjando alianzas clave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 10: Nuestra Petición -->
+    <section id="peticion" class="slide">
+        <div class="container mx-auto text-center">
+            <h2 class="slide-title">Únete al Episodio</h2>
+            <div class="card max-w-4xl mx-auto mt-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-left p-4">
+                        <h3 class="font-bold text-3xl text-white mb-4">Ronda Semilla: $200,000</h3>
+                        <p class="text-lg text-gray-300 mb-4">Buscamos cerrar nuestra ronda para lanzar operaciones y acelerar el crecimiento.</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-2 text-sm">
+                                <span class="font-bold text-gray-300">Progreso</span>
+                                <span class="font-bold text-gray-300">$100,000 / $200,000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%;">50%</div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 text-center mb-6">
+                            <div>
+                                <p class="text-2xl font-bold text-green-400">$100,000</p>
+                                <p class="text-sm text-gray-400">Ya Recaudado</p>
+                            </div>
+                             <div>
+                                <p class="text-2xl font-bold text-yellow-400">$100,000</p>
+                                <p class="text-sm text-gray-400">Restante</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-gray-300 mb-2"><strong>Adicionalmente, buscamos Alianzas Estratégicas:</strong></p>
+                         <ul class="list-disc list-inside text-gray-400 space-y-1">
+                            <li>Contactos en eventos y con marcas afines.</li>
+                            <li>Embajadores de marca que amen la cultura de internet.</li>
+                        </ul>
+                    </div>
+                     <img src="https://i.postimg.cc/wtJPmKx5/Dark-Kitchen-Fig-Jam-5.jpg" alt="Bebida oscura de Black Mirror" class="rounded-lg w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Slide 11: Contacto -->
+    <footer id="contacto" class="py-12 bg-gray-900 text-center">
+        <div class="container mx-auto">
+             <h2 class="text-4xl font-black text-white">Gracias.</h2>
+             <p class="text-gray-400 mt-2">Estamos listos para empezar a escribir esta historia.</p>
+             <div class="mt-6">
+                 <p class="text-gray-300 mt-2 font-bold text-2xl">@EpisodioDulce</p>
+             </div>
+        </div>
+    </footer>
+
+</body>
+</html>
